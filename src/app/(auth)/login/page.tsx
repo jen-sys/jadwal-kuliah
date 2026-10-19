@@ -39,7 +39,7 @@ export default function LoginPage() {
   return (
     <main className="min-h-screen flex items-center justify-center p-4">
       <div className={`${cardCls} w-full max-w-sm p-6`}>
-        <h1 className="text-xl font-bold text-indigo-600">KuliahKu</h1>
+        <h1 className="text-xl font-bold text-indigo-600">AwasDeadline</h1>
         <p className="text-sm text-slate-500 mb-5">Masuk untuk melihat jadwal dan tugasmu.</p>
         <form onSubmit={submit} className="space-y-3">
           <div>

@@ -1,4 +1,4 @@
-# KuliahKu
+# AwasDeadline
 
 Pengingat jadwal kuliah & tugas untuk mahasiswa.
 Next.js 14 (App Router) + TypeScript + Tailwind CSS + Prisma + SQLite.
@@ -18,8 +18,8 @@ Buat JWT_SECRET acak: `openssl rand -base64 48`
 
 ### Opsi B — mulai dari create-next-app
 ```bash
-npx create-next-app@14 kuliahku --typescript --tailwind --eslint --app --src-dir --import-alias "@/*"
-cd kuliahku
+npx create-next-app@14 AwasDeadline --typescript --tailwind --eslint --app --src-dir --import-alias "@/*"
+cd AwasDeadline
 npm install @prisma/client@5 bcryptjs jose
 npm install -D prisma@5 @types/bcryptjs
 npx prisma init --datasource-provider sqlite

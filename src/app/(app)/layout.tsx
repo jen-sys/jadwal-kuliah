@@ -13,7 +13,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
       <header className="sticky top-0 z-30 bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
           <div className="flex items-center gap-6">
-            <span className="font-bold text-indigo-600">KuliahKu</span>
+            <span className="font-bold text-indigo-600">AwasDeadline</span>
             <TopNav />
           </div>
           <div className="flex items-center gap-3">

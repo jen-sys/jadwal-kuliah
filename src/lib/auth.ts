@@ -2,7 +2,7 @@ import { SignJWT, jwtVerify } from "jose";
 import bcrypt from "bcryptjs";
 import { cookies } from "next/headers";
 
-export const COOKIE_NAME = "kuliahku_token";
+export const COOKIE_NAME = "AwasDeadline_token";
 const MAX_AGE = 60 * 60 * 24 * 7; // 7 hari (detik)
 
 export type Session = { userId: string; name: string };
