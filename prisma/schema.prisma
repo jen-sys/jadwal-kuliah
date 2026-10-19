@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  nim       String
+  kelas     String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  courses   Course[]
+  tasks     Task[]
+}
+
+model Course {
+  id        String  @id @default(cuid())
+  userId    String
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name      String
+  lecturer  String?
+  room      String?
+  day       String
+  startTime String
+  endTime   String
+  color     String  @default("#4F46E5")
+  tasks     Task[]
+}
+
+model Task {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId  String?
+  course    Course?  @relation(fields: [courseId], references: [id], onDelete: SetNull)
+  title     String
+  notes     String?
+  deadline  DateTime
+  priority  String   @default("MEDIUM")
+  done      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
